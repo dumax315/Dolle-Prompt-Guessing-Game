@@ -6,7 +6,7 @@ from starlette.responses import RedirectResponse
 import schemas
 import crud
 
-#intialize web app / api
+#intialize web app / pi
 app = FastAPI()
 
 # Allows cors for everyone **Ignore**
@@ -18,7 +18,7 @@ app.add_middleware(
     allow_credentials=True,
 )
 
-# Redirects base url to docs goto /redoc for more fancy documentation 
+# Redirects base url to docs goto /redoc for fancy documentation 
 @app.get("/")
 def main():
     return RedirectResponse(url="/docs")
