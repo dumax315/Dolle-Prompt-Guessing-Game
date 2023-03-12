@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/fragmentContinue"
         android:name="com.example.myapplication.FragmentContinue"
-        android:label="fragment_continue"
+        android:label="You're Score"
         tools:layout="@layout/fragment_continue">
         <action
             android:id="@+id/action_fragmentContinue_to_SecondFragment"
