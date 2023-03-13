@@ -6,6 +6,7 @@ from replit import db as users
 import schemas
 import crud
 
+from .genImage import genImage
 
 
 from typing import Union, Optional
@@ -65,6 +66,13 @@ def update_user(username:str, points: int):
     users[username] += points
     return users[username]
 
+@app.get("/get-image")
+def get_image():
+  Image = {
+    
+  }
+  return genImage()
+  
 
 @app.delete("/delete-user")
 def delete_user(username :str = Query(..., description = "delete the user with the username")):
@@ -75,4 +83,5 @@ def delete_user(username :str = Query(..., description = "delete the user with t
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
